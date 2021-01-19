@@ -4,4 +4,8 @@ public class HelloWorld {
       System.out.println("Hello world! " + i);
     }
   }
+
+  public static String helloWorld() {
+    return "Hello World";
+  }
 }
