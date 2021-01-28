@@ -2,3 +2,11 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 mainClassName = 'csci2020u.lab02.SimpleTest'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.commons:commons-csv:1.8'
+}
