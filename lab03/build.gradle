@@ -3,6 +3,16 @@ apply plugin: 'application'
 
 mainClassName = 'csci2020u.lab03.CSVDemo'
 
+version = '1.0'
+
+jar {
+    manifest {
+        attributes "Main-Class": mainClassName,
+        "Implementation-Title": "Lab 3 example",
+        "Implementation-Version": version
+    }
+}
+
 repositories {
     mavenCentral()
 }
