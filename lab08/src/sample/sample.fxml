@@ -1,0 +1,52 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <MenuBar fx:id="menuBar" GridPane.rowIndex="0" GridPane.columnIndex="0">
+        <Menu text="File">
+            <MenuItem text="New" fx:id="newMenuItem" onAction="#newPressed"/>
+            <MenuItem text="Open" fx:id="openMenuItem" onAction="#openPressed"/>
+            <MenuItem text="Save" fx:id="saveMenuItem" onAction="#savePressed"/>
+            <MenuItem text="Save as" fx:id="saveAsMenuItem" onAction="#saveAsPressed"/>
+            <MenuItem text="Exit" fx:id="exitMenuItem" onAction="#exitPressed"/>
+        </Menu>
+    </MenuBar>
+    <TableView fx:id="tableView" GridPane.rowIndex="1" GridPane.columnIndex="0">
+        <columns>
+            <TableColumn fx:id="studentID" text="Student ID"/>
+            <TableColumn fx:id="midterm" text="Midterm"/>
+            <TableColumn fx:id="assignments" text="Assignments"/>
+            <TableColumn fx:id="finalExam" text="Final Exam"/>
+            <TableColumn fx:id="finalMark" text="Final Mark"/>
+            <TableColumn fx:id="letterGrade" text="Letter Grade"/>
+        </columns>
+    </TableView>
+    <VBox GridPane.rowIndex="2" GridPane.columnIndex="0" spacing="10">
+        <HBox spacing="10" alignment="BASELINE_CENTER">
+            <Label text="Student ID:"/>
+            <TextField promptText="ID" fx:id="studentIdField"/>
+            <Label text="Assignments:"/>
+            <TextField promptText="Assignments/100" fx:id="assignmentsField"/>
+        </HBox>
+        <HBox spacing="10" alignment="BASELINE_CENTER">
+            <Label text="Midterm:"/>
+            <TextField promptText="Midterm/100" fx:id="midtermField"/>
+            <Label text="Final exam:"/>
+            <TextField promptText="Final exam/100" fx:id="finalExamField"/>
+        </HBox>
+        <Button text="Add" onAction="#addStudentRecord"/>
+    </VBox>
+
+
+</GridPane>
